@@ -1,30 +1,30 @@
-# \# Aplikasi Presensi Mahasiswa
+# Aplikasi Presensi Mahasiswa
 
 # 
 
-# Aplikasi presensi mahasiswa berbasis \*\*Flutter\*\* dan \*\*Firebase\*\* untuk membantu proses pencatatan kehadiran mahasiswa secara digital.
+# Aplikasi presensi mahasiswa berbasis Flutter dan Firebase untuk membantu proses pencatatan kehadiran mahasiswa secara digital.
 
 # 
 
-# \## 📱 Fitur Aplikasi
+# 📱 Fitur Aplikasi
 
 # 
 
-# \- \*\*Login dan Registrasi\*\* — autentikasi pengguna menggunakan Firebase Authentication.
+# \-Login dan Registrasi — autentikasi pengguna menggunakan Firebase Authentication.
 
-# \- \*\*Dashboard\*\* — halaman utama aplikasi.
+# \-Dashboard — halaman utama aplikasi.
 
-# \- \*\*Presensi Mahasiswa\*\* — pencatatan kehadiran dengan dukungan lokasi GPS.
+# \-Presensi Mahasiswa — pencatatan kehadiran dengan dukungan lokasi GPS.
 
-# \- \*\*Validasi Lokasi\*\* — pembatasan presensi berdasarkan lokasi yang ditentukan.
+# \-Validasi Lokasi — pembatasan presensi berdasarkan lokasi yang ditentukan.
 
-# \- \*\*Riwayat Presensi\*\* — melihat catatan kehadiran.
+# \-Riwayat Presensi — melihat catatan kehadiran.
 
-# \- \*\*Profil Mahasiswa\*\* — menampilkan informasi profil pengguna.
+# \-Profil Mahasiswa — menampilkan informasi profil pengguna.
 
 # 
 
-# \## 🛠️ Teknologi yang Digunakan
+# &#x20;🛠️ Teknologi yang Digunakan
 
 # 
 
@@ -40,11 +40,11 @@
 
 # 
 
-# \## 📂 Struktur Project
+# &#x20;📂 Struktur Project
 
 # 
 
-# ```text
+# text
 
 # presensi\_mahasiswa/
 
@@ -72,11 +72,11 @@
 
 # └── README.md
 
-# ```
+# 
 
 # 
 
-# \## ⚙️ Persyaratan
+# &#x20;⚙️ Persyaratan
 
 # 
 
@@ -90,7 +90,7 @@
 
 # 
 
-# \## 🚀 Cara Menjalankan Aplikasi
+# &#x20;🚀 Cara Menjalankan Aplikasi
 
 # 
 
@@ -98,11 +98,11 @@
 
 # 
 
-# &#x20;  ```bash
+# &#x20;  bash
 
 # &#x20;  git clone https://github.com/fadhl09/Aplikasi-presensi-mahasiswa-berbasis-Flutter-dan-Firebase.git
 
-# &#x20;  ```
+# &#x20;  
 
 # 
 
@@ -110,11 +110,11 @@
 
 # 
 
-# &#x20;  ```bash
+# &#x20;  bash
 
 # &#x20;  cd Aplikasi-presensi-mahasiswa-berbasis-Flutter-dan-Firebase
 
-# &#x20;  ```
+# &#x20;  
 
 # 
 
@@ -122,11 +122,11 @@
 
 # 
 
-# &#x20;  ```bash
+# &#x20;  bash
 
 # &#x20;  flutter pub get
 
-# &#x20;  ```
+# &#x20;  
 
 # 
 
@@ -134,15 +134,15 @@
 
 # 
 
-# &#x20;  ```bash
+# &#x20;  bash
 
 # &#x20;  flutter run
 
-# &#x20;  ```
+# &#x20;  
 
 # 
 
-# \## 🔥 Konfigurasi Firebase
+# &#x20;🔥 Konfigurasi Firebase
 
 # 
 
@@ -154,7 +154,7 @@
 
 # 
 
-# \## 🧪 Pengujian
+# &#x20;🧪 Pengujian
 
 # 
 
@@ -162,27 +162,25 @@
 
 # 
 
-# \## 👥 Tim Pengembang
+# &#x20;👥 Tim Pengembang
 
 # 
 
-# \*\*Kelompok 11\*\*
+# Kelompok 11
 
 # 
 
-# \- Program Studi: \[Isi nama program studi]
+# \- Fadhl Nurina Amirullah(250605110096)
 
-# \- Institusi: \[Isi nama institusi]
+# \- Ayudya Bagus Putraditrio(250605110097)
 
-# \- Tahun: 2026
+# \- Ahmad Ramadhani(250605110271)
 
-# 
 
-# \## 📄 Lisensi
+
+# &#x20;📄 Lisensi
 
 # 
 
 # Project ini dikembangkan untuk keperluan tugas akademik.
-
-
 
