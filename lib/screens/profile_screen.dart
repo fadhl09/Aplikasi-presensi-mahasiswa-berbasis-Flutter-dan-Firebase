@@ -73,8 +73,25 @@ class ProfileScreen extends StatelessWidget {
                 style: OutlinedButton.styleFrom(foregroundColor: Colors.red, padding: const EdgeInsets.all(14)),
                 icon: const Icon(Icons.logout_rounded), label: const Text('Keluar'),
                 onPressed: () async {
-                  await FirebaseAuth.instance.signOut();
-                  // AuthGate akan menampilkan halaman login setelah sesi berakhir.
+                  // AuthGate mendengarkan authStateChanges dan otomatis
+                  // mengganti beranda menjadi halaman login setelah signOut.
+                  // Jangan melakukan Navigator push di sini agar tidak terjadi
+                  // konflik navigasi atau halaman login bertumpuk.
+                  try {
+                    await FirebaseAuth.instance.signOut();
+                    if (!context.mounted) return;
+                    // Halaman Detail Akun dibuka di atas Dashboard dengan Navigator.push.
+                    // AuthGate sudah berubah menjadi LoginScreen, tetapi halaman profil
+                    // yang masih di atasnya harus ditutup agar login langsung terlihat.
+                    Navigator.of(context).popUntil((route) => route.isFirst);
+                  } catch (e) {
+                    if (!context.mounted) return;
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text('Gagal keluar. Periksa koneksi lalu coba lagi.'),
+                      ),
+                    );
+                  }
                 },
               ),
             ],
@@ -125,6 +142,9 @@ class _ChangePasswordDialogState extends State<_ChangePasswordDialog> {
   final _next = TextEditingController();
   final _confirm = TextEditingController();
   bool _busy = false;
+  bool _showCurrent = false;
+  bool _showNext = false;
+  bool _showConfirm = false;
   String? _errorMessage;
 
   @override
@@ -209,18 +229,32 @@ class _ChangePasswordDialogState extends State<_ChangePasswordDialog> {
             children: [
               TextFormField(
                 controller: _current,
-                obscureText: true,
+                obscureText: !_showCurrent,
                 autocorrect: false,
                 enableSuggestions: false,
-                decoration: const InputDecoration(labelText: 'Password saat ini'),
+                decoration: InputDecoration(
+                  labelText: 'Password saat ini',
+                  suffixIcon: IconButton(
+                    tooltip: _showCurrent ? 'Sembunyikan password' : 'Tampilkan password',
+                    icon: Icon(_showCurrent ? Icons.visibility_off : Icons.visibility),
+                    onPressed: () => setState(() => _showCurrent = !_showCurrent),
+                  ),
+                ),
                 validator: (v) => (v == null || v.isEmpty) ? 'Wajib diisi' : null,
               ),
               TextFormField(
                 controller: _next,
-                obscureText: true,
+                obscureText: !_showNext,
                 autocorrect: false,
                 enableSuggestions: false,
-                decoration: const InputDecoration(labelText: 'Password baru'),
+                decoration: InputDecoration(
+                  labelText: 'Password baru',
+                  suffixIcon: IconButton(
+                    tooltip: _showNext ? 'Sembunyikan password' : 'Tampilkan password',
+                    icon: Icon(_showNext ? Icons.visibility_off : Icons.visibility),
+                    onPressed: () => setState(() => _showNext = !_showNext),
+                  ),
+                ),
                 validator: (v) {
                   if (v == null || v.length < 6) return 'Minimal 6 karakter';
                   if (v == _current.text) return 'Password baru harus berbeda';
@@ -229,10 +263,17 @@ class _ChangePasswordDialogState extends State<_ChangePasswordDialog> {
               ),
               TextFormField(
                 controller: _confirm,
-                obscureText: true,
+                obscureText: !_showConfirm,
                 autocorrect: false,
                 enableSuggestions: false,
-                decoration: const InputDecoration(labelText: 'Ulangi password baru'),
+                decoration: InputDecoration(
+                  labelText: 'Ulangi password baru',
+                  suffixIcon: IconButton(
+                    tooltip: _showConfirm ? 'Sembunyikan password' : 'Tampilkan password',
+                    icon: Icon(_showConfirm ? Icons.visibility_off : Icons.visibility),
+                    onPressed: () => setState(() => _showConfirm = !_showConfirm),
+                  ),
+                ),
                 validator: (v) => v != _next.text ? 'Password tidak sama' : null,
               ),
               if (_errorMessage != null) ...[

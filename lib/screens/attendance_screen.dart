@@ -29,7 +29,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
 
   static const double campusLatitude = -7.950000;
   static const double campusLongitude = 112.610000;
-  static const double maximumDistance = 1000;
+  static const double maximumDistance = 100;
 
   Future<void> takeSelfie() async {
     if (isLoading) return;
