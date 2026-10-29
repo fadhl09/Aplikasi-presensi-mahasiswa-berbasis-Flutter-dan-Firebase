@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "931185482585",
+    "project_id": "presensi-mahasiswa-d658a",
+    "storage_bucket": "presensi-mahasiswa-d658a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931185482585:android:c7de7c352a0f100eab8a48",
+        "android_client_info": {
+          "package_name": "com.example.presensi_mahasiswa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD73sFnq6SKNCGQ0p5WH3B5fVbMrtnyJ_w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
