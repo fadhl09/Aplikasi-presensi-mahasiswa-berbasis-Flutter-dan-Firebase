@@ -16,7 +16,7 @@
 
 # \- \*\*Presensi Mahasiswa\*\* — pencatatan kehadiran dengan dukungan lokasi GPS.
 
-# \- \*\*Validasi Lokasi\*\* — pembatasan presensi berdasarkan radius lokasi yang ditentukan.
+# \- \*\*Validasi Lokasi\*\* — pembatasan presensi berdasarkan lokasi yang ditentukan.
 
 # \- \*\*Riwayat Presensi\*\* — melihat catatan kehadiran.
 
@@ -36,7 +36,7 @@
 
 # \- Cloud Firestore
 
-# \- Geolocation / GPS
+# \- GPS / Geolocation
 
 # 
 
@@ -80,17 +80,11 @@
 
 # 
 
-# Pastikan perangkat pengembangan sudah memiliki:
-
-# 
-
 # \- Flutter SDK
 
-# \- Dart SDK (tersedia bersama Flutter)
+# \- Visual Studio Code atau IDE yang mendukung Flutter
 
-# \- Visual Studio Code atau IDE lain yang mendukung Flutter
-
-# \- Android Studio atau Android SDK untuk menjalankan aplikasi Android
+# \- Android Studio atau Android SDK
 
 # \- Proyek Firebase yang telah dikonfigurasi
 
@@ -136,7 +130,7 @@
 
 # 
 
-# 4\. Jalankan aplikasi pada emulator atau perangkat yang terhubung:
+# 4\. Jalankan aplikasi:
 
 # 
 
@@ -156,7 +150,7 @@
 
 # 
 
-# Jangan membagikan private key, kredensial rahasia, atau file konfigurasi yang mengandung informasi sensitif ke repository publik.
+# Jangan mengunggah private key, kredensial rahasia, atau informasi sensitif ke repository publik.
 
 # 
 
@@ -164,11 +158,7 @@
 
 # 
 
-# Pengujian aplikasi dilakukan untuk memeriksa fungsi autentikasi, presensi, validasi lokasi, riwayat kehadiran, dan profil pengguna.
-
-# 
-
-# Hasil pengujian dapat ditambahkan pada bagian ini setelah seluruh skenario pengujian dijalankan.
+# Pengujian dilakukan untuk memeriksa fungsi autentikasi, presensi, validasi lokasi, riwayat kehadiran, dan profil pengguna. Hasil pengujian akan ditambahkan setelah skenario pengujian dijalankan.
 
 # 
 
